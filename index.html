@@ -1,76 +1,67 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ma première page publiée avec GitHub Pages.">
-  <title>Ma première page — Coucou</title>
-  <style>
-    :root {
-      color-scheme: light;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f4f7fb;
-      color: #172033;
-    }
-    * { box-sizing: border-box; }
-    body {
-      min-height: 100vh;
-      margin: 0;
-      display: grid;
-      place-items: center;
-      padding: 24px;
-      background:
-        radial-gradient(circle at 15% 15%, rgba(75, 119, 255, .14), transparent 32rem),
-        radial-gradient(circle at 85% 85%, rgba(27, 183, 164, .13), transparent 28rem),
-        #f4f7fb;
-    }
-    main {
-      width: min(100%, 720px);
-      padding: clamp(32px, 7vw, 64px);
-      border: 1px solid rgba(30, 48, 80, .10);
-      border-radius: 28px;
-      background: rgba(255, 255, 255, .88);
-      box-shadow: 0 24px 80px rgba(24, 42, 78, .10);
-      text-align: center;
-    }
-    .eyebrow {
-      display: inline-block;
-      margin-bottom: 18px;
-      padding: 8px 13px;
-      border-radius: 999px;
-      background: #edf2ff;
-      color: #3659bd;
-      font-size: .78rem;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-    h1 {
-      margin: 0;
-      font-size: clamp(3rem, 10vw, 5.5rem);
-      line-height: 1;
-      letter-spacing: -.065em;
-    }
-    p {
-      max-width: 46ch;
-      margin: 22px auto 0;
-      color: #5b667b;
-      font-size: 1.08rem;
-      line-height: 1.7;
-    }
-    footer {
-      margin-top: 38px;
-      color: #8791a4;
-      font-size: .88rem;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Découvrir les postes et les styles de jeu au handball.">
+<title>Handball Passion — Postes et styles de jeu</title>
+<style>
+:root{--navy:#10243a;--blue:#1769aa;--orange:#ff8a3d;--paper:#f4f7fb;--ink:#243447;--muted:#607286}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+header{color:white;background:linear-gradient(120deg,#10243a,#1769aa);padding:26px 7% 68px}
+nav,.hero,main{max-width:1050px;margin:auto}nav{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.logo{font-weight:800;letter-spacing:1px}nav a{color:white;text-decoration:none;margin-left:18px;font-weight:bold}
+.hero{margin-top:65px}.eyebrow{color:#ffd1ad;text-transform:uppercase;letter-spacing:2px;font-size:.8rem;font-weight:bold}
+h1{font-size:clamp(2.5rem,7vw,4.5rem);line-height:1.05;margin:12px 0 18px;max-width:760px}.hero p{max-width:650px;color:#e6f0fa;font-size:1.1rem}
+.btn{display:inline-block;margin-top:16px;background:var(--orange);color:#17283a;padding:11px 19px;border-radius:30px;text-decoration:none;font-weight:800}
+main{padding:0 7% 65px}section{padding-top:52px}.kicker{color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:1.4px;font-size:.78rem}
+h2{color:var(--navy);font-size:clamp(1.8rem,4vw,2.4rem);margin:5px 0}.intro{color:var(--muted);max-width:720px;margin-top:0}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.card{background:white;padding:21px;border-radius:15px;box-shadow:0 8px 24px #10243a12;border-top:4px solid var(--blue)}
+.num{color:var(--orange);font-size:.78rem;font-weight:900;letter-spacing:1px}.card h3{color:var(--navy);margin:6px 0}.card p{color:var(--muted);margin:0}
+.tag{display:inline-block;margin-top:13px;padding:4px 10px;border-radius:20px;background:#eaf3fb;color:#14558a;font-size:.78rem;font-weight:bold}
+.styles{display:grid;grid-template-columns:1fr 1fr;gap:15px}.style{display:flex;gap:14px;background:white;padding:17px;border-radius:14px}.emoji{flex:0 0 43px;height:43px;border-radius:12px;background:#fff0e6;display:grid;place-items:center;font-size:1.3rem}
+.style h3{margin:0 0 4px;color:var(--navy)}.style p{margin:0;color:var(--muted)}
+.note{margin-top:23px;padding:18px 20px;background:#e8f1fa;border-left:5px solid var(--orange);border-radius:10px}
+footer{text-align:center;background:var(--navy);color:#dce8f4;padding:24px 7%}footer p{margin:4px}
+@media(max-width:760px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.styles{grid-template-columns:1fr}}
+@media(max-width:520px){.cards{grid-template-columns:1fr}header{padding-bottom:48px}.hero{margin-top:45px}nav a{margin:0 10px 0 0}}
+</style>
 </head>
 <body>
-  <main>
-    <span class="eyebrow">Mon premier site · GitHub Pages</span>
-    <h1>Coucou 👋</h1>
-    <p>Bienvenue sur ma première page web publiée avec Git et GitHub Pages.</p>
-    <footer>Créé dans le cadre du projet de L1 Informatique · 2026/2027</footer>
-  </main>
+<header id="accueil">
+<nav><div class="logo">🤾 HANDBALL PASSION</div><div><a href="#postes">Les postes</a><a href="#styles">Les styles</a></div></nav>
+<div class="hero"><div class="eyebrow">Découvrir le handball</div>
+<h1>Chaque joueur a son rôle sur le terrain.</h1>
+<p>Le handball est un sport collectif rapide. Chaque joueur apporte ses qualités : vitesse, puissance, précision, vision du jeu ou défense.</p>
+<a class="btn" href="#postes">Découvrir les postes ↓</a></div>
+</header>
+<main>
+<section id="postes"><div class="kicker">01 · Les positions</div><h2>Les 7 joueurs sur le terrain</h2>
+<p class="intro">Une équipe joue avec un gardien et six joueurs de champ. Voici les principaux postes et leurs missions.</p>
+<div class="cards">
+<article class="card"><div class="num">POSTE 01</div><h3>🧤 Gardien de but</h3><p>Il protège le but, arrête les tirs et relance rapidement pour lancer une contre-attaque.</p><span class="tag">Réflexes · Concentration</span></article>
+<article class="card"><div class="num">POSTE 02</div><h3>⚡ Ailier gauche</h3><p>Il joue sur le côté gauche, court vite et tire souvent depuis un angle fermé.</p><span class="tag">Vitesse · Agilité</span></article>
+<article class="card"><div class="num">POSTE 03</div><h3>⚡ Ailier droit</h3><p>Il occupe le côté droit et cherche à finir les actions près de la ligne de touche.</p><span class="tag">Détente · Précision</span></article>
+<article class="card"><div class="num">POSTE 04</div><h3>💪 Arrière gauche</h3><p>Il tire souvent de loin, passe et crée des décalages dans la défense adverse.</p><span class="tag">Puissance · Tir</span></article>
+<article class="card"><div class="num">POSTE 05</div><h3>💪 Arrière droit</h3><p>Comme l'arrière gauche, il peut tirer de loin, pénétrer et faire des passes.</p><span class="tag">Puissance · Technique</span></article>
+<article class="card"><div class="num">POSTE 06</div><h3>🧠 Demi-centre</h3><p>Il organise l'attaque, annonce les combinaisons et distribue le ballon.</p><span class="tag">Vision · Décision</span></article>
+<article class="card"><div class="num">POSTE 07</div><h3>🛡️ Pivot</h3><p>Il joue près de la zone adverse, bloque les défenseurs et cherche à recevoir le ballon.</p><span class="tag">Force · Placement</span></article>
+</div>
+<div class="note"><strong>À retenir :</strong> les postes peuvent changer selon la tactique. Les joueurs doivent communiquer et s'adapter pendant le match.</div>
+</section>
+<section id="styles"><div class="kicker">02 · Les qualités</div><h2>Différents styles de jeu</h2>
+<p class="intro">Le style d'un joueur dépend de ses points forts et de sa façon de participer au jeu.</p>
+<div class="styles">
+<article class="style"><div class="emoji">🚀</div><div><h3>Le joueur rapide</h3><p>Il accélère, prend les espaces et part vite en contre-attaque.</p></div></article>
+<article class="style"><div class="emoji">💥</div><div><h3>Le joueur puissant</h3><p>Il utilise sa force pour tirer de loin et résister au contact.</p></div></article>
+<article class="style"><div class="emoji">🎯</div><div><h3>Le joueur précis</h3><p>Il choisit bien ses tirs et vise les espaces difficiles pour le gardien.</p></div></article>
+<article class="style"><div class="emoji">🧠</div><div><h3>Le joueur organisateur</h3><p>Il observe le jeu, fait les bonnes passes et construit les actions.</p></div></article>
+<article class="style"><div class="emoji">🛡️</div><div><h3>Le joueur défensif</h3><p>Il gêne les attaques, intercepte les passes et protège son espace.</p></div></article>
+<article class="style"><div class="emoji">🤝</div><div><h3>Le joueur collectif</h3><p>Il communique, fait jouer ses partenaires et aide toute l'équipe.</p></div></article>
+</div>
+<div class="note"><strong>Conclusion :</strong> une équipe est efficace lorsque les qualités de chaque joueur se complètent et que tous jouent ensemble.</div>
+</section>
+</main>
+<footer><p><strong>HANDBALL PASSION</strong></p><p>Petit projet de découverte des postes et des styles de jeu au handball.</p></footer>
 </body>
 </html>
